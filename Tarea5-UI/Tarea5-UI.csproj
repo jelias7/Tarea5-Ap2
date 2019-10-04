@@ -78,6 +78,7 @@
   <ItemGroup>
     <Content Include="Consultas\cCategorias.aspx" />
     <Content Include="Consultas\cEstudiantes.aspx" />
+    <Content Include="Consultas\cEvaluaciones.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -90,6 +91,7 @@
     <Content Include="Global.asax" />
     <Content Include="Registros\rCategorias.aspx" />
     <Content Include="Registros\rEstudiantes.aspx" />
+    <Content Include="Registros\rEvaluaciones.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -156,6 +158,13 @@
     <Compile Include="Consultas\cEstudiantes.aspx.designer.cs">
       <DependentUpon>cEstudiantes.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Consultas\cEvaluaciones.aspx.cs">
+      <DependentUpon>cEvaluaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\cEvaluaciones.aspx.designer.cs">
+      <DependentUpon>cEvaluaciones.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -187,6 +196,13 @@
     </Compile>
     <Compile Include="Registros\rEstudiantes.aspx.designer.cs">
       <DependentUpon>rEstudiantes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registros\rEvaluaciones.aspx.cs">
+      <DependentUpon>rEvaluaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registros\rEvaluaciones.aspx.designer.cs">
+      <DependentUpon>rEvaluaciones.aspx</DependentUpon>
     </Compile>
     <Compile Include="Utilitarios\Utils.cs" />
   </ItemGroup>
