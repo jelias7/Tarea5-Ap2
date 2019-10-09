@@ -206,6 +206,7 @@
     <Compile Include="Registros\rEvaluaciones.aspx.designer.cs">
       <DependentUpon>rEvaluaciones.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Utilitarios\Enums.cs" />
     <Compile Include="Utilitarios\Utils.cs" />
   </ItemGroup>
   <ItemGroup>

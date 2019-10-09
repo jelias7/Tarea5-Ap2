@@ -55,6 +55,7 @@
                         <asp:TextBox runat="server" ID="TotalPerdidoTextBox" CssClass="form-control input-sm" ReadOnly="true"></asp:TextBox>
                     </div>
              </div>
+              <asp:Label ID="Mensaje" runat="server" CssClass="col-form-label-lg" Text=""></asp:Label>
     </div>
         <br />
            <div class="panel-footer">

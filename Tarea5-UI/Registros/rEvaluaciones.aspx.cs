@@ -23,6 +23,17 @@ namespace Tarea5_UI.Registros
                 BindGrid();
             }
         }
+        void MostrarMensaje(TiposMensaje tipo, string mensaje)
+        {
+            Mensaje.Text = mensaje;
+
+            if (tipo == TiposMensaje.Success)
+                Mensaje.CssClass = "alert-success";
+            else if (tipo == TiposMensaje.Error)
+                Mensaje.CssClass = "alert-danger";
+            else
+                Mensaje.CssClass = "alert-warning";
+        }
         private void ValoresDeDropdowns()
         {
             RepositorioBase<Estudiantes> db = new RepositorioBase<Estudiantes>();
@@ -139,27 +150,27 @@ namespace Tarea5_UI.Registros
             if (Utils.ToInt(IDTextBox.Text) == 0)
             {
                 paso = BLL.EvaluacionBLL.Guardar(E);
+                Response.Redirect(Request.RawUrl);
             }
             else
             {
                 if (!ExisteEnLaBaseDeDatos())
                 {
 
-                    Utils.ShowToastr(this.Page, "Problema al guardar", "Error", "error");
+                    MostrarMensaje(TiposMensaje.Error, "Error al guardar.");
                     return;
                 }
                 paso = BLL.EvaluacionBLL.Modificar(E);
+                Response.Redirect(Request.RawUrl);
             }
 
             if (paso)
             {
-                Utils.ShowToastr(this.Page, "Guardado con exito!!", "Guardado", "success");
+                MostrarMensaje(TiposMensaje.Success, "Exito al guardar.");
                 return;
             }
             else
-                Utils.ShowToastr(this.Page, "Problema al guardar", "Error", "error");
-
-            Response.Redirect(Request.RawUrl);
+                MostrarMensaje(TiposMensaje.Error, "Error al guardar.");
         }
 
         protected void EliminarButton_Click(object sender, EventArgs e)
@@ -172,13 +183,13 @@ namespace Tarea5_UI.Registros
             {
                 if (BLL.EvaluacionBLL.Eliminar(Utils.ToInt(IDTextBox.Text)))
                 {
-                    Utils.ShowToastr(this.Page, "Eliminado con exito!!", "Guardado", "success");
+                    MostrarMensaje(TiposMensaje.Success, "Eliminado con exito.");
                 }
                 else
-                    Utils.ShowToastr(this.Page, "Problema al eliminar", "Error", "error");
+                    MostrarMensaje(TiposMensaje.Error, "No se ha podido eliminar.");
             }
             else
-                Utils.ShowToastr(this.Page, "Problema al eliminar", "Error", "error");
+                MostrarMensaje(TiposMensaje.Error, "No se ha podido eliminar.");
 
             Response.Redirect(Request.RawUrl);
         }
@@ -195,7 +206,7 @@ namespace Tarea5_UI.Registros
                 LlenaCampo(E);
             else
             {
-                Utils.ShowToastr(this.Page, "Problema al buscar", "Error", "error");
+                MostrarMensaje(TiposMensaje.Warning, "Problemas inesperados.");
             }
         }
     }
