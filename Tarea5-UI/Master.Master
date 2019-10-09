@@ -16,16 +16,13 @@
 </head>
 <body>
     <form id="form1" runat="server">
-         <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+         <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
   <a class="navbar-brand" href="#">Tarea 5</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="Default.aspx">Home <span class="sr-only">(current)</span></a>
-      </li>
       <li class="nav-item">
         <a class="nav-link" href="/Registros/rEstudiantes.aspx">Estudiantes</a>
       </li>
@@ -34,6 +31,15 @@
       </li>
          <li class="nav-item">
         <a class="nav-link" href="/Registros/rEvaluaciones.aspx">Evaluaciones</a>
+      </li>
+         <li class="nav-item">
+        <a class="nav-link" href="/Consultas/cEvaluaciones.aspx">Consulta Evaluaciones</a>
+      </li>
+         <li class="nav-item">
+        <a class="nav-link" href="/Consultas/cCategorias.aspx">Consulta Categorias</a>
+      </li>
+         <li class="nav-item">
+        <a class="nav-link" href="/Consultas/cEstudiantes.aspx">Consulta Estudiantes</a>
       </li>
     </ul>
   </div>
